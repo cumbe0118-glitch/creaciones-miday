@@ -1,0 +1,320 @@
+/* ========== ESTILOS GENERALES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8fc;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========== TIPOGRAFÍA ADAPTATIVA ========== */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    color: #ffffff;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: #b84a82;
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
+    color: #b84a82;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-bottom: 15px;
+}
+
+/* ========== SECCIÓN HERO Y LOGO ========== */
+.hero {
+    min-height: 85vh;
+    background: linear-gradient(135deg, #ff5fa2, #ffd1e6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* ✅ LOGO RESPONSIVO Y SIN BORDES */
+.logo-principal {
+    width: clamp(180px, 50%, 420px);
+    height: auto;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-principal:hover {
+    transform: scale(1.05);
+}
+
+.hero-content p {
+    color: #ffffff;
+    font-size: clamp(1.1rem, 3vw, 1.25rem);
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* ========== BOTONES ========== */
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #d63384;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.95rem, 2vw, 1rem);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.2);
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.3);
+    background-color: #fff0f7;
+}
+
+.btn-center {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ========== SECCIONES GENERALES ========== */
+section {
+    padding: 60px 0;
+}
+
+.about {
+    background-color: #ffffff;
+}
+
+/* ========== TARJETAS DE SERVICIOS ========== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 95, 162, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .icon {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card .text {
+    font-weight: 500;
+    color: #b84a82;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* ========== GALERÍA DE IMÁGENES ========== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.photo, .gallery img {
+    height: clamp(180px, 30vw, 280px);
+    background-color: #ffd8eb;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.gallery img:hover {
+    opacity: 0.85;
+}
+
+.photo {
+    color: #b84a82;
+    font-weight: 500;
+}
+
+/* ========== SECCIÓN UNIVERSIDAD ========== */
+.universidad {
+    background: linear-gradient(135deg, #fff7fb, #ffe0ef);
+}
+
+.video-universidad {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(184, 74, 130, 0.1);
+}
+
+/* ========== CONTACTO Y REDES SOCIALES ========== */
+.contact {
+    background-color: #ffffff;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+.contact-info a {
+    color: #d63384;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ ÍCONOS DE REDES ADAPTATIVOS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(42px, 8vw, 50px);
+    height: clamp(42px, 8vw, 50px);
+    border-radius: 50%;
+    background-color: #fff0f7;
+    color: #d63384;
+    font-size: clamp(18px, 4vw, 22px);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(214, 51, 132, 0.15);
+}
+
+.social-icon:hover {
+    transform: translateY(-4px);
+    background-color: #ff5fa2;
+    color: white;
+}
+
+/* ========== PIE DE PÁGINA ========== */
+.footer {
+    background-color: #b84a82;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.footer-social {
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 6px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    margin: 0;
+}
+
+/* ========== MEDIA QUERIES: AJUSTES POR DISPOSITIVO ========== */
+
+/* Para Tablets medianas y grandes */
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Para Celulares y Tablets pequeñas */
+@media (max-width: 768px) {
+    section {
+        padding: 40px 0;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Para Celulares muy pequeños */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
